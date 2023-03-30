@@ -1,0 +1,71 @@
+body {
+    background-image: url(../images/weather-forecast-background.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.card {
+    background-color: rgb(0, 0, 0, 0.5);
+    padding: 1rem;
+    border-radius: 10px;
+    color: whitesmoke;
+}
+
+header {
+    margin: 1rem;
+}
+
+#title {
+    margin: 1rem;
+    text-align: center;
+    font-size: xx-large;
+}
+
+main {
+    display: flex;
+}
+
+aside {
+    width: 30%;
+}
+
+#search {
+    margin: 1rem;
+}
+
+#recent {
+    margin: 1rem;
+}
+
+article {
+    display: flex;
+    flex-direction: column;
+}
+
+#current {
+    height: 40%;
+    margin: 1rem;
+}
+
+#daysTitle {
+    margin: 1rem;
+}
+
+#forecast {
+    height: 60%;
+    margin: 1rem;
+}
+
+#days {
+    display: flex;
+    margin: 1rem;
+}
+
+footer {
+    margin: 1rem;
+}
+
+#cuteExit {
+    margin: 1rem;
+}
