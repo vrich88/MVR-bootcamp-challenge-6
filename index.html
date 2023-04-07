@@ -15,7 +15,7 @@
     <!-- site title area maybe future navigation -->
     <header>
         <section id="title" class="card">
-            <strong>The Weather is Here</strong>
+            The Weather is Here
         </section>
     </header>
     <!-- main content of the site -->
@@ -25,7 +25,7 @@
             <!-- portion for new search -->
             <section id="newSearch" class="card">
                 <div id="searchTitle">
-                    <strong>Search for a City</strong>
+                    Search for a City
                 </div>
                 <form id="searchForm">
                     <input id="searchInput" placeholder="City">
@@ -37,24 +37,14 @@
             <!-- portion for recent search recall -->
             <section id="recentSearch" class="card">
                 <div id="recentTitle">
-                    <strong>Recent City Forecasts:</strong>
+                    Recent Forecasts:
                 </div>
                 <ul id="recentList">
-                    <li>
-                        <button>Fort Worth</button>
-                    </li>
-                    <li>
-                        <button>Houston</button>
-                    </li>
-                    <li>
-                        <button>South Padre Island</button>
-                    </li>
-                    <li>
-                        <button>El Paso</button>
-                    </li>
-                    <li>
-                        <button>Lubbock</button>
-                    </li>
+                    <button>Fort Worth</button>
+                    <button>Houston</button>
+                    <button>South Padre Island</button>
+                    <button>El Paso</button>
+                    <button>Lubbock</button>
                 </ul>
             </section>
         </aside>
@@ -63,42 +53,40 @@
             <!-- display of current conditions -->
             <section id="current" class="card">
                 <div id="currentTitle">
-                    <strong>City</strong>
+                    The Starter City
                 </div>
                 <div class="forecastBasic">
                     <div id="currentIcon" class="icon">
-                        Icon
                     </div>
                     <div id="currentDate" class="date">
-                        Date
+                        Now
                     </div>
                 </div>
                 <div class="forecastDetail">
                     <div class="stat">
-                        Temperature: <span id="currentTemperature" class="temperature">888</span> &#8457;
+                        Temperature: <span id="currentTemperature" class="temperature">Fair</span> &#8457;
                     </div>
                     <div class="stat">
-                        Wind Speed: <span id="currentWindSpeed" class="windSpeed">888</span> MPH
+                        Wind Speed: <span id="currentWindSpeed" class="windSpeed">Gentle Breeze</span> MPH
                     </div>
                     <div class="stat">
-                        Humidity: <span id="currentHumidity" class="humidity">888</span> %
+                        Humidity: <span id="currentHumidity" class="humidity">Light</span> %
                     </div>
                 </div>
             </section>
-            <!-- display of 5 day  future forecast -->
+            <!-- display of 5 day forecast in the future -->
             <section id="future">
                 <div id="daysTitle" class="card">
-                    <strong>5 Day Forecast</strong>
+                    5 Day Forecast
                 </div>
                 <div id="daysBlock">
                     <!-- day 1 of future forecast -->
                     <section id="day1" class="card days">
                         <div class="forecastBasic">
                             <div id="d1Icon" class="icon">
-                                Icon
                             </div>
                             <div id="d1Date" class="date">
-                                Date
+                                Tomorrow
                             </div>
                         </div>
                         <div class="forecastDetail">
@@ -117,10 +105,9 @@
                     <section id="day2" class="card days">
                         <div class="forecastBasic">
                             <div id="d2Icon" class="icon">
-                                Icon
                             </div>
                             <div id="d2Date" class="date">
-                                Date
+                                In a Couple of Days
                             </div>
                         </div>
                         <div class="forecastDetail">
@@ -139,10 +126,9 @@
                     <section id="day3" class="card days">
                         <div class="forecastBasic">
                             <div id="d3Icon" class="icon">
-                                Icon
                             </div>
                             <div id="d3Date" class="date">
-                                Date
+                                Then in Few Days
                             </div>
                         </div>
                         <div class="forecastDetail">
@@ -161,10 +147,9 @@
                     <section id="day4" class="card days">
                         <div class="forecastBasic">
                             <div id="d4Icon" class="icon">
-                                Icon
                             </div>
                             <div id="d4Date" class="date">
-                                Date
+                                The Day After That
                             </div>
                         </div>
                         <div class="forecastDetail">
@@ -183,10 +168,9 @@
                     <section id="day5" class="card days">
                         <div class="forecastBasic">
                             <div id="d5Icon" class="icon">
-                                Icon
                             </div>
                             <div id="d5Date" class="date">
-                                Date
+                                Several Days Later
                             </div>
                         </div>
                         <div class="forecastDetail">
@@ -214,10 +198,15 @@
     <!-- javascript connections -->
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <!-- moment.js -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <!-- dayjs -->
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
+        integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U=" crossorigin="anonymous"></script>
     <!-- my javascript -->
     <script src="./assets/js/script.js"></script>
 </body>
 
 </html>
+
+
+<!-- moment.js -->
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script> -->
