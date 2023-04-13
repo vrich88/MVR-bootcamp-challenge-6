@@ -40,11 +40,6 @@
                     Recent Forecasts:
                 </div>
                 <ul id="recentList">
-                    <button>Fort Worth</button>
-                    <button>Houston</button>
-                    <button>South Padre Island</button>
-                    <button>El Paso</button>
-                    <button>Lubbock</button>
                 </ul>
             </section>
         </aside>
@@ -63,14 +58,14 @@
                     </div>
                 </div>
                 <div class="forecastDetail">
-                    <div class="stat">
-                        Temperature: <span id="currentTemperature" class="temperature">Fair</span> &#8457;
+                    <div id="currentTemperature" class="stat">
+                        Temperature: Fair °F
                     </div>
-                    <div class="stat">
-                        Wind Speed: <span id="currentWindSpeed" class="windSpeed">Gentle Breeze</span> MPH
+                    <div id="currentWindSpeed" class="stat">
+                        Wind Speed: Gentle Breeze MPH
                     </div>
-                    <div class="stat">
-                        Humidity: <span id="currentHumidity" class="humidity">Light</span> %
+                    <div id="currentHumidity" class="stat">
+                        Humidity: Light %
                     </div>
                 </div>
             </section>
@@ -79,109 +74,96 @@
                 <div id="daysTitle" class="card">
                     5 Day Forecast
                 </div>
-                <div id="daysBlock">
-                    <!-- day 1 of future forecast -->
-                    <section id="day1" class="card days">
+                <div id="daysBlock" class="hide"></div>
+                <!-- starter city temporary future forecast -->
+                <div id="temporary">
+                    <section class="card days">
                         <div class="forecastBasic">
-                            <div id="d1Icon" class="icon">
-                            </div>
-                            <div id="d1Date" class="date">
+                            <div class="date">
                                 Tomorrow
                             </div>
                         </div>
                         <div class="forecastDetail">
                             <div class="stat">
-                                Temperature: <span id="d1Temperature" class="temperature">888</span> &#8457;
+                                Temperature: <span>Decent</span> &#8457;
                             </div>
                             <div class="stat">
-                                Wind Speed: <span id="d1WindSpeed" class="windSpeed">888</span> MPH
+                                Wind Speed: <span>Stiff</span> MPH
                             </div>
                             <div class="stat">
-                                Humidity: <span id="d1Humidity" class="humidity">888</span> %
+                                Humidity: <span>Not Bad</span> %
                             </div>
                         </div>
                     </section>
-                    <!-- day 2 of future forecast -->
-                    <section id="day2" class="card days">
+                    <section class="card days">
                         <div class="forecastBasic">
-                            <div id="d2Icon" class="icon">
-                            </div>
-                            <div id="d2Date" class="date">
+                            <div class="date">
                                 In a Couple of Days
                             </div>
                         </div>
                         <div class="forecastDetail">
                             <div class="stat">
-                                Temperature: <span id="d2Temperature" class="temperature">888</span> &#8457;
+                                Temperature: <span>Cooling Down</span> &#8457;
                             </div>
                             <div class="stat">
-                                Wind Speed: <span id="d2WindSpeed" class="windSpeed">888</span> MPH
+                                Wind Speed: <span>Strong</span> MPH
                             </div>
                             <div class="stat">
-                                Humidity: <span id="d2Humidity" class="humidity">888</span> %
+                                Humidity: <span>Swampy</span> %
                             </div>
                         </div>
                     </section>
-                    <!-- day 3 of future forecast -->
-                    <section id="day3" class="card days">
+                    <section class="card days">
                         <div class="forecastBasic">
-                            <div id="d3Icon" class="icon">
-                            </div>
-                            <div id="d3Date" class="date">
-                                Then in Few Days
+                            <div class="date">
+                                Then in a Few Days
                             </div>
                         </div>
                         <div class="forecastDetail">
                             <div class="stat">
-                                Temperature: <span id="d3Temperature" class="temperature">888</span> &#8457;
+                                Temperature: <span>Cold</spans=> &#8457;
                             </div>
                             <div class="stat">
-                                Wind Speed: <span id="d3WindSpeed" class="windSpeed">888</span> MPH
+                                Wind Speed: <span>Hurricane</span> MPH
                             </div>
                             <div class="stat">
-                                Humidity: <span id="d3Humidity" class="humidity">888</span> %
+                                Humidity: <span>Underwater</span> %
                             </div>
                         </div>
                     </section>
-                    <!-- day 4 of future forecast -->
-                    <section id="day4" class="card days">
+                    <section class="card days">
                         <div class="forecastBasic">
-                            <div id="d4Icon" class="icon">
-                            </div>
-                            <div id="d4Date" class="date">
+                            <div class="date">
                                 The Day After That
                             </div>
                         </div>
                         <div class="forecastDetail">
                             <div class="stat">
-                                Temperature: <span id="d4Temperature" class="temperature">888</span> &#8457;
+                                Temperature: <span>A Bit Warm</span> &#8457;
                             </div>
                             <div class="stat">
-                                Wind Speed: <span id="d4WindSpeed" class="windSpeed">888</span> MPH
+                                Wind Speed: <span>Gusty</span> MPH
                             </div>
                             <div class="stat">
-                                Humidity: <span id="d4Humidity" class="humidity">888</span> %
+                                Humidity: <span>Dry</span> %
                             </div>
                         </div>
                     </section>
-                    <!-- day 5 of future forecast -->
-                    <section id="day5" class="card days">
+                    <section class="card days">
                         <div class="forecastBasic">
-                            <div id="d5Icon" class="icon">
-                            </div>
-                            <div id="d5Date" class="date">
+                            <div class="date">
                                 Several Days Later
                             </div>
                         </div>
                         <div class="forecastDetail">
                             <div class="stat">
-                                Temperature: <span id="d5Temperature" class="temperature">888</span> &#8457;
+                                Temperature: <span>Just Right</span> &#8457;
                             </div>
                             <div class="stat">
-                                Wind Speed: <span id="d5WindSpeed" class="windSpeed">888</span> MPH
+                                Wind Speed: <span>Cooling Breeze</span> MPH
                             </div>
                             <div class="stat">
-                                Humidity: <span id="d5Humidity" class="humidity">888</span> %
+                                Humidity: <span>Perfect</span> %
                             </div>
                         </div>
                     </section>
@@ -206,7 +188,3 @@
 </body>
 
 </html>
-
-
-<!-- moment.js -->
-<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script> -->
