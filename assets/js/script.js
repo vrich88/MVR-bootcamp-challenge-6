@@ -4,10 +4,11 @@ let newSearch = $(`#searchInput`).val();
 let searchBtn = $(`#searchBtn`);
 let daysBlock = $(`#daysBlock`);
 let temporary = $(`#temporary`);
-let recentSearches = [];
+let recentSearches = "";
 
 // check for and load recent searches from local history
 $(document).ready(writePastSearches(recentSearches));
+$(document).on('load', writePastSearches(recentSearches));
 
 // event listener for a new search
 searchBtn.on(`click`, function (event) {
@@ -24,6 +25,17 @@ searchBtn.on(`click`, function (event) {
     daysBlock.removeClass("hide");
 }
 );
+
+// event listener for past searches buttons
+$('#recentList').on('click', function (event) {
+    let citySearch = $(event.target);
+    // call for current & future forecasts from past search
+    getForecast(citySearch);
+    predictForecast(citySearch);
+    $(`#searchInput`).val("");
+    temporary.addClass("hide");
+    daysBlock.removeClass("hide");
+})
 
 // function to fetch data to get & show current forecast
 function getForecast(citySearch) {
@@ -109,22 +121,23 @@ function predictForecast(citySearch) {
 function resetForecast() {
     $(`#currentIcon`).empty();
     daysBlock.empty();
-}
+};
 
-// function to save new city searches
+// function to save new city searches to local storage
 function saveSearch(citySearch) {
     if (!recentSearches.includes(citySearch)) {
         recentSearches.push(citySearch);
-        localStorage.setItem(recentSearches, recentSearches);
+        localStorage.setItem("recentSearches", JSON.stringify(recentSearches));
     }
-}
+};
 
 // function to write past searches from local storage
 function writePastSearches() {
     for (let i = 0; i < localStorage.length; i++) {
-        let writable = localStorage.getItem(recentSearches[i]);
+        let pastSearch = JSON.parse(localStorage.getItem("recentSearches"));
+        console.log(pastSearch);
         let createBtn = document.createElement("button");
         $(`#recentList`).append(createBtn);
-        $(createBtn).text(writable);
+        createBtn.innerHTML = pastSearch;
     }
-}
+};
