@@ -126,7 +126,7 @@ function resetForecast() {
 // function to save new city searches to local storage
 function saveSearch(citySearch) {
     if (!recentSearches.includes(citySearch)) {
-        recentSearches.push(citySearch);
+        // recentSearches.push(citySearch);
         localStorage.setItem("recentSearches", JSON.stringify(recentSearches));
     }
 };
